@@ -91,10 +91,29 @@
 					$modal = $gallery.children('.modal'),
 					$modalImg = $modal.find('img'),
 					href = $a.attr('href');
+					//create a youtube variable here 
+					//$$modalVid = blah blah blah
+					//i can dynamically load the embedded code into the modal
+		
+				// console.log($a);
+
+				
+
 
 				// Not an image? Bail.
-					if (!href.match(/\.(jpg|gif|png|mp4)$/))
-						return;
+					// if (!href.match(/\.(jpg|gif|png|mp4)$/))
+					// if it's a video, do this
+				        if ($a.attr('data')== 'video')
+				          console.log('this is a video');
+					// return;
+					//if it has a video attribute, attach a video class to the modal for max/min height for the iframe. 
+						//in video class, there will be a default for height and width for the modal
+						//
+					//if its a picture, attach the picture class/leave it as default
+
+
+
+
 
 				// Prevent default.
 					event.preventDefault();
