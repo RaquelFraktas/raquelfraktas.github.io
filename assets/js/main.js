@@ -90,21 +90,37 @@
 					$gallery = $a.parents('.gallery'),
 					$modal = $gallery.children('.modal'),
 					$modalImg = $modal.find('img'),
-					href = $a.attr('href');
+					href = $a.attr('href'),
 					//create a youtube variable here 
-					//$$modalVid = blah blah blah
+					$video = $a.children('.iframeVideo');
+					// $('.iframeVideo')
+					// $video = $a.find('iframe')
+					// $videoSrc = $video.attr('href');
+					console.log($video)
+					
 					//i can dynamically load the embedded code into the modal
 		
-				// console.log($a);
 
-				
+				//add a child to the $modal that's a child (or whatever modal class is being built)
+
+//dynamically adding classes to be visible and not visible is typical ~
+				//if the data is a video, then create a css class conditional for height and width for the modal (dwfault)
+
+				//#1: get the correct modal open (this case would be for videos)
+				  //needs to recognize that this is a video
+				  //can write sass code for that video modal
+				  //then figure out how to put the iframe in the modal that opens up
+				  //find the children elements of atag, which contains the iframe
+				  //then grab the html in that iframe
 
 
 				// Not an image? Bail.
 					// if (!href.match(/\.(jpg|gif|png|mp4)$/))
 					// if it's a video, do this
 				        if ($a.attr('data')== 'video')
-				          console.log('this is a video');
+				          console.log('this is a video'),
+						  $video.addClass('visible');
+				
 					// return;
 					//if it has a video attribute, attach a video class to the modal for max/min height for the iframe. 
 						//in video class, there will be a default for height and width for the modal
