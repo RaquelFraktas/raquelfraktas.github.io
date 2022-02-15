@@ -109,9 +109,16 @@
 				//#1: get the correct modal open (this case would be for videos)
 				  //needs to recognize that this is a video
 				  //can write sass code for that video modal
+				  	//make sure modal videos has at minimum visibility < 0 , z-index < 1, and has height and width that's fixed
 				  //then figure out how to put the iframe in the modal that opens up
 				  //find the children elements of atag, which contains the iframe
 				  //then grab the html in that iframe
+
+
+				  //challenging: dynamically adding iframe into modal 
+				  // q: how can i tell the modal that there's an iframe present? 
+				  // how can i add that iframe code/style into the modal?
+			
 
 
 				// Not an image? Bail.
